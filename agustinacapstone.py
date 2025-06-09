@@ -22,14 +22,13 @@ from imblearn.over_sampling import SMOTE
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score, precision_score, recall_score, f1_score
 import pickle
 
-#Membaca Dataset
-df= pd.read_csv('ObesityDataSet.csv')
 
-# Mount Google Drive
-from google.colab import drive
-drive.mount('/content/drive')
+file_id = '11k0xpcPsXget04fLLnmSanju2VQnwdHI'
+url = f'https://drive.google.com/uc?id={file_id}'
 
-df = pd.read_csv('/content/drive/MyDrive/Colab Notebooks/ObesityDataSet.csv')
+df = pd.read_csv(url)
+df.head()
+
 
 # Melihat Struktur Dataset
 df.head()
